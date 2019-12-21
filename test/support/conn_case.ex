@@ -21,6 +21,7 @@ defmodule HabitusWeb.ConnCase do
     quote do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
+      import Habitus.TestHelpers
       alias HabitusWeb.Router.Helpers, as: Routes
 
       # The default endpoint for testing

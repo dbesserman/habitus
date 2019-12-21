@@ -1,0 +1,2 @@
+<h1>Nouvel Objéctif</h1>
+<%= render "form.html", Map.put(assigns, :action, Routes.objective_path(@conn, :create)) %>

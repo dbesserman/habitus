@@ -24,6 +24,7 @@ defmodule Habitus.DataCase do
       import Ecto.Changeset
       import Ecto.Query
       import Habitus.DataCase
+      import Habitus.TestHelpers
     end
   end
 

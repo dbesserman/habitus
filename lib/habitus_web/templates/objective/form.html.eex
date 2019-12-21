@@ -1,0 +1,18 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <p>Une erreur c'est produite</p>
+  <% end %>
+
+  <p> Je veux</p>
+  <p>
+    <%= text_input f, :description %>
+    <%= error_tag f, :description %>
+  </p>
+  <p>moins de</p>
+    <%= number_input f, :threshold %>
+    <%= error_tag f, :threshold %>
+  </p>
+  <p>fois par jours</p>
+
+  <%= submit "C'est parti!" %>
+<% end %>
