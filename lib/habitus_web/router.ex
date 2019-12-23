@@ -17,7 +17,9 @@ defmodule HabitusWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
-    resources "/objectives", ObjectiveController, only: [:new, :create]
+    resources "/objectives", ObjectiveController, only: [:new, :create] do
+      resources "/objective_events", ObjectiveEventController, only: [:create]
+    end
   end
 
   # Other scopes may use custom stacks.

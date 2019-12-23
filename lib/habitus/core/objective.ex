@@ -6,6 +6,8 @@ defmodule Habitus.Core.Objective do
     field :description, :string
     field :threshold, :integer
 
+    has_many :objective_events, Habitus.Core.ObjectiveEvent
+
     timestamps()
   end
 
