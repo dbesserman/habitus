@@ -4,7 +4,7 @@ defmodule HabitusWeb.PageController do
   alias Habitus.Core
 
   def index(conn, _params) do
-    objectives = Core.list_objectives()
+    objectives = Core.list_objectives(:today)
     render(conn, "index.html", objectives: objectives)
   end
 end

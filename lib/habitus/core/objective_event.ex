@@ -10,7 +10,7 @@ defmodule Habitus.Core.ObjectiveEvent do
 
   def changeset(objective_event, attrs \\ %{}) do
     objective_event
-    |> cast(attrs, [:objective_id])
+    |> cast(attrs, [:objective_id, :inserted_at])
     |> assoc_constraint(:objective)
   end
 end

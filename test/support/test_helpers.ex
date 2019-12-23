@@ -10,8 +10,8 @@ defmodule Habitus.TestHelpers do
     objective
   end
 
-  def objective_event_fixture(objective) do
-    {:ok, objective_event} = Core.create_objective_event(objective)
+  def objective_event_fixture(objective, attrs \\ %{}) do
+    {:ok, objective_event} = Core.create_objective_event(objective, attrs)
 
     objective_event
   end
