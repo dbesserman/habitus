@@ -15,4 +15,10 @@ defmodule Habitus.TestHelpers do
 
     objective_event
   end
+
+  def objective_evaluation_fixture(objective, attrs \\ %{}) do
+    {:ok, objective_evaluation} = Core.create_objective_evaluation(objective, attrs)
+
+    objective_evaluation
+  end
 end

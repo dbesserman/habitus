@@ -5,6 +5,7 @@ defmodule HabitusWeb.PageController do
 
   def index(conn, _params) do
     objectives = Core.list_objectives(:today)
-    render(conn, "index.html", objectives: objectives)
+    total_score = Core.total_score()
+    render(conn, "index.html", objectives: objectives, total_score: total_score)
   end
 end

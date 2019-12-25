@@ -17,6 +17,12 @@ config :habitus, HabitusWeb.Endpoint,
   render_errors: [view: HabitusWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Habitus.PubSub, adapter: Phoenix.PubSub.PG2]
 
+config :habitus, Habitus.Scheduler,
+  timezone: "Europe/Paris",
+  jobs: [
+    {"@daily", {Habitus.Core, :start_yesterdays_objective_evaluation, []}}
+  ]
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",

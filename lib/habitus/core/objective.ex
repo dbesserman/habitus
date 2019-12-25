@@ -7,6 +7,7 @@ defmodule Habitus.Core.Objective do
     field :threshold, :integer
 
     has_many :objective_events, Habitus.Core.ObjectiveEvent
+    has_many :objective_evaluations, Habitus.Core.ObjectiveEvaluation
 
     timestamps()
   end

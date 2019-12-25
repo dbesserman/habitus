@@ -1,5 +1,7 @@
 <h1>Salut l'ami!</h1>
 
+<p>Tu as actuellement <%= @total_score %> points</p>
+
 <%= link "Définis un objectif", to: Routes.objective_path(@conn, :new) %>
 
 <h2>Objectifs</h2>
@@ -9,7 +11,7 @@
     <li>
       <%= objective.description %>
       <%= Enum.count(objective.objective_events) %>
-      <%= form_for @conn, Routes.objective_objective_event_path(@conn, :create, objective), fn f -> %>
+      <%= form_for @conn, Routes.objective_objective_event_path(@conn, :create, objective), fn _ -> %>
         <%= submit "+" %>
       <% end %>
     </li>
