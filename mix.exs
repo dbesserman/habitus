@@ -33,6 +33,7 @@ defmodule Habitus.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      {:comeonin, "~> 5.2"},
       {:phoenix, "~> 1.4.11"},
       {:phoenix_pubsub, "~> 1.1"},
       {:phoenix_ecto, "~> 4.0"},
@@ -44,7 +45,12 @@ defmodule Habitus.MixProject do
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
       {:timex, "~> 3.6"},
-      {:quantum, "~> 2.3"}
+      {:quantum, "~> 2.3"},
+      {:commanded, "~> 1.0.0"},
+      {:commanded_eventstore_adapter, "~> 1.0.0"},
+      {:vex, "~> 0.7"},
+      {:exconstructor, "~> 1.1"},
+      {:argon2_elixir, "~> 2.0"}
     ]
   end
 
